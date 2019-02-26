@@ -21,6 +21,8 @@ class SecondViewController: ViewController {
         //navigation 스택에 있는 view를 pop함으로서 뒤로 이동
     }
 
+    @IBOutlet var namelabel:UILabel?
+    @IBOutlet var agelabel:UILabel?
     /*
     // MARK: - Navigation
 
@@ -30,6 +32,11 @@ class SecondViewController: ViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func viewWillAppear(_ animated: Bool) {
+        namelabel?.text=UserInterface.shared.name
+        agelabel?.text=UserInterface.shared.age
+    }
     
     @IBAction func dissmissModal(){
         self.dismiss(animated: true, completion: nil)

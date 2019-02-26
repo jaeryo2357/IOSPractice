@@ -14,6 +14,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    @IBOutlet var nameinput:UITextField?
+    @IBOutlet var ageinput:UITextField?
 
+    @IBAction func setinput(_ sender:UIButton)
+    {
+        UserInterface.shared.name = nameinput?.text
+        UserInterface.shared.age = ageinput?.text
+    }
+    
 }
 
