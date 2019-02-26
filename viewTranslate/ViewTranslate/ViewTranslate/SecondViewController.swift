@@ -18,6 +18,7 @@ class SecondViewController: ViewController {
     
     @IBAction func popprev(){
         self.navigationController?.popViewController(animated: true)
+        //navigation 스택에 있는 view를 pop함으로서 뒤로 이동
     }
 
     /*
@@ -32,6 +33,7 @@ class SecondViewController: ViewController {
     
     @IBAction func dissmissModal(){
         self.dismiss(animated: true, completion: nil)
+        //modal로 창을 띄운것을 끔
     }
 
 }
